@@ -1,37 +1,3 @@
-<style>
-
-body{
-font-family:Arial;
-margin:40px;
-background:#0f172a;
-color:#e5e7eb;
-}
-
-h1{
-color:#38bdf8;
-}
-
-h2{
-color:#cbd5f5;
-}
-
-h3{
-color:#22c55e;
-margin-top:30px;
-}
-
-section{
-background:#1e293b;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-}
-
-a{
-color:#38bdf8;
-}
-
-</style>
 <!DOCTYPE html>
 <html>
 
@@ -39,43 +5,128 @@ color:#38bdf8;
 
 <title>Bikrant Kumar Mishra | Geo-AI Portfolio</title>
 
+<script src="https://unpkg.com/globe.gl"></script>
+
 <style>
 
 body{
 font-family:Arial;
-margin:40px;
-background:#f4f4f4;
-color:#333;
+margin:0;
+padding:40px;
+background:#020617;
+color:#e2e8f0;
+
+/* STAR BACKGROUND */
+
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+background-position:0 0,25px 25px;
+}
+
+/* MAIN CARD */
+
+.container{
+max-width:1000px;
+margin:auto;
+background:#020617;
+padding:40px;
+border-radius:15px;
+box-shadow:0 0 50px rgba(59,130,246,0.6);
+}
+
+/* PROFILE */
+
+.profile{
+text-align:center;
+margin-bottom:40px;
+}
+
+.profile img{
+width:180px;
+border-radius:50%;
+border:3px solid #3b82f6;
+box-shadow:0 0 25px #3b82f6;
+margin-bottom:15px;
 }
 
 h1{
-color:#0d47a1;
+color:#38bdf8;
+margin-bottom:5px;
 }
 
 h2{
-color:#37474f;
+color:#cbd5f5;
+font-weight:normal;
 }
 
-h3{
-color:#1a237e;
-margin-top:30px;
-}
+/* SECTIONS */
 
 section{
-background:white;
+background:#0f172a;
 padding:20px;
 margin-bottom:20px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 0 20px rgba(59,130,246,0.3);
 }
 
+h3{
+color:#22c55e;
+margin-top:0;
+}
+
+/* LINKS */
+
 a{
-color:#0d47a1;
+color:#38bdf8;
 text-decoration:none;
 }
 
 a:hover{
 text-decoration:underline;
+}
+
+/* BUTTON */
+
+.button{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#3b82f6;
+color:white;
+border-radius:6px;
+box-shadow:0 0 15px #3b82f6;
+}
+
+.button:hover{
+background:#2563eb;
+}
+
+/* PROJECT CARDS */
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:#020617;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(59,130,246,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+box-shadow:0 0 30px rgba(59,130,246,0.7);
+}
+
+#earth{
+height:500px;
+margin-bottom:40px;
 }
 
 </style>
@@ -84,15 +135,28 @@ text-decoration:underline;
 
 <body>
 
+<div class="container">
+
+<div class="profile">
+
+<img src="Bikrant_passphoto.jpeg">
+
 <h1>Bikrant Kumar Mishra</h1>
+
 <h2>B.Sc Geology | Aspiring Computational Geoscientist</h2>
+
+<a href="Bikrant_BS.c_cv.pdf" class="button">Download CV</a>
+
+</div>
+
+<div id="earth"></div>
 
 <section>
 
 <h3>About Me</h3>
 
 <p>
-I am a B.Sc. Geology student with strong interest in Geo-AI, GIS, and computational geoscience. My academic work integrates geological field investigations with data analysis and machine learning techniques for applications in hazard assessment and resource exploration.
+I am a B.Sc. Geology student interested in Geo-AI, GIS and computational geoscience. My work integrates geological field investigation with machine learning and geospatial analysis for hazard prediction and resource exploration.
 </p>
 
 </section>
@@ -106,7 +170,7 @@ I am a B.Sc. Geology student with strong interest in Geo-AI, GIS, and computatio
 <li>AI-driven geological interpretation</li>
 <li>Earthquake prediction using machine learning</li>
 <li>Computational mineral exploration</li>
-<li>Petroleum and hydrocarbon prospectivity modeling</li>
+<li>Hydrocarbon prospectivity modelling</li>
 <li>Geospatial analysis and remote sensing</li>
 
 </ul>
@@ -118,67 +182,60 @@ I am a B.Sc. Geology student with strong interest in Geo-AI, GIS, and computatio
 <h3>Education</h3>
 
 <p>
+
 B.Sc (Honours) Geology  
 Khallikote Unitary University  
 CGPA: 8.14 / 10
+
 </p>
 
 </section>
 
 <section>
 
-<h3>Projects</h3>
+<h3>AI Research Projects</h3>
 
-<ul>
+<div class="projects">
 
-<li>
-AetherVision Omega – Geo-AI Smart City Intelligence System
-</li>
+<div class="card">
 
-<li>
-Earthquake Strength Classification Model  
-<a href="https://github.com/bikrantmishrageo2005/GeoAI-Earthquake-Strength-Classification">
-View Project
-</a>
-</li>
+<h4>AetherVision Omega</h4>
 
-<li>
-Mineral Prospectivity Mapping using Geo-AI  
-<a href="https://github.com/bikrantmishrageo2005/mineral-prospectivity-mapping">
-View Project
-</a>
-</li>
+<p>Geo-AI smart city system integrating pollution monitoring, seismic risk analytics and urban intelligence.</p>
 
-<li>
-Hydrocarbon Prospectivity Modeling  
-<a href="https://github.com/bikrantmishrageo2005/GeoAI-Hydrocarbon-Prospectivity-Modeling">
-View Project
-</a>
-</li>
+</div>
 
-</ul>
+<div class="card">
 
-</section>
+<h4>Earthquake Strength Classification</h4>
 
-<section>
+<p>Machine learning based classification model for earthquake intensity.</p>
 
-<h3>Field & Research Reports</h3>
+<a href="https://github.com/bikrantmishrageo2005/GeoAI-Earthquake-Strength-Classification">View Code</a>
 
-<ul>
+</div>
 
-<li>
-Geological Field Report – Eastern Ghats Mobile Belt (Odisha)
-</li>
+<div class="card">
 
-<li>
-Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast
-</li>
+<h4>Mineral Prospectivity Mapping</h4>
 
-<li>
-Local Geological Assessment – Koraput Region
-</li>
+<p>Geo-AI model for predicting mineralized zones using geospatial data.</p>
 
-</ul>
+<a href="https://github.com/bikrantmishrageo2005/mineral-prospectivity-mapping">View Code</a>
+
+</div>
+
+<div class="card">
+
+<h4>Hydrocarbon Prospectivity Model</h4>
+
+<p>AI driven basin modelling for hydrocarbon exploration.</p>
+
+<a href="https://github.com/bikrantmishrageo2005/GeoAI-Hydrocarbon-Prospectivity-Modeling">View Code</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -189,27 +246,10 @@ Local Geological Assessment – Koraput Region
 <ul>
 
 <li>Computational Geoscience & Geo-AI</li>
-<li>Python for scientific computing</li>
-<li>Machine Learning for geological analysis</li>
-<li>GIS & geological mapping (QGIS)</li>
-<li>Geological mapping & structural analysis</li>
-<li>Rock and mineral identification</li>
-<li>Petrographic microscopy & thin section analysis</li>
-<li>Scientific visualization and data interpretation</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h3>Languages</h3>
-
-<ul>
-
-<li>English – Professional proficiency</li>
-<li>Hindi – Professional proficiency</li>
-<li>Odia – Native</li>
+<li>Python scientific computing</li>
+<li>Machine learning for geological analysis</li>
+<li>GIS & geological mapping</li>
+<li>Petrographic microscopy</li>
 
 </ul>
 
@@ -219,31 +259,44 @@ Local Geological Assessment – Koraput Region
 
 <h3>Contact</h3>
 
-<p>
-Phone: +91 7855880937
-</p>
+<p>Phone: +91 7855880937</p>
+
+<p>Email: bikrantmishra.geo.2005@gmail.com</p>
 
 <p>
-Email: bikrantmishra.geo.2005@gmail.com
-</p>
 
-<p>
 LinkedIn:
 <a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398">
 linkedin.com/in/bikrant-kumar-mishra
 </a>
+
 </p>
 
 <p>
+
 GitHub:
 <a href="https://github.com/bikrantmishrageo2005">
 github.com/bikrantmishrageo2005
 </a>
+
 </p>
 
 </section>
 
+</div>
+
+<script>
+
+const world = Globe()
+(document.getElementById('earth'))
+.globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+.backgroundColor('#020617')
+.showAtmosphere(true)
+.atmosphereColor('#3b82f6')
+.atmosphereAltitude(0.25);
+
+</script>
+
 </body>
 
 </html>
-<img src="Bikrant_passphoto.jpeg" width="180">
