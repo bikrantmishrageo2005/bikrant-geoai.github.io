@@ -27,15 +27,15 @@ left:0;
 width:100%;
 height:100%;
 z-index:-1;
-opacity:0.55;
+opacity:0.9;
 }
 
 /* MAIN CONTAINER */
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-background:rgba(2,6,23,0.88);
+background:rgba(2,6,23,0.6);
 padding:40px;
 border-radius:15px;
 box-shadow:0 0 60px rgba(59,130,246,0.6);
@@ -49,8 +49,8 @@ margin-bottom:40px;
 }
 
 .profile img{
-width:180px;
-height:180px;
+width:160px;
+height:160px;
 object-fit:cover;
 border-radius:50%;
 border:3px solid #3b82f6;
@@ -68,14 +68,28 @@ color:#cbd5f5;
 font-weight:normal;
 }
 
-/* SECTIONS */
+/* GRID */
 
-section{
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:40px;
+}
+
+/* CARDS */
+
+.card{
 background:#0f172a;
-padding:25px;
-margin-bottom:25px;
+padding:20px;
 border-radius:12px;
-box-shadow:0 0 25px rgba(59,130,246,0.35);
+box-shadow:0 0 20px rgba(59,130,246,0.35);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px rgba(59,130,246,0.8);
 }
 
 h3{
@@ -83,7 +97,13 @@ color:#22c55e;
 margin-top:0;
 }
 
-/* LINKS */
+/* PROJECT GRID */
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
 
 a{
 color:#38bdf8;
@@ -92,39 +112,6 @@ text-decoration:none;
 
 a:hover{
 text-decoration:underline;
-}
-
-/* BUTTON */
-
-.button{
-display:inline-block;
-margin-top:10px;
-padding:10px 20px;
-background:#3b82f6;
-color:white;
-border-radius:6px;
-box-shadow:0 0 15px #3b82f6;
-}
-
-/* PROJECT CARDS */
-
-.projects{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.card{
-background:#020617;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 20px rgba(59,130,246,0.4);
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px rgba(59,130,246,0.8);
 }
 
 </style>
@@ -147,33 +134,35 @@ box-shadow:0 0 40px rgba(59,130,246,0.8);
 
 </div>
 
-<section>
+<div class="grid">
+
+<div class="card">
 
 <h3>Profile</h3>
 
 <p>
-I am a B.Sc. Geology undergraduate with strong interest in Geo-AI, GIS and computational geoscience. My work integrates geological field investigation with machine learning and geospatial analysis for hazard assessment and resource exploration.
+B.Sc Geology undergraduate interested in Geo-AI, GIS and computational geoscience. My work integrates geological field investigation with machine learning and geospatial analysis for hazard assessment and resource exploration.
 </p>
 
-</section>
+</div>
 
-<section>
+<div class="card">
 
 <h3>Research Interests</h3>
 
 <ul>
 
 <li>AI-driven geological interpretation</li>
-<li>Earthquake prediction using machine learning</li>
+<li>Earthquake prediction</li>
 <li>Computational mineral exploration</li>
 <li>Hydrocarbon prospectivity modelling</li>
-<li>Geospatial analysis and remote sensing</li>
+<li>Geospatial analysis</li>
 
 </ul>
 
-</section>
+</div>
 
-<section>
+<div class="card">
 
 <h3>Education</h3>
 
@@ -185,31 +174,59 @@ CGPA: 8.14 / 10
 
 </p>
 
-</section>
+</div>
 
-<section>
+<div class="card">
 
 <h3>Academic Reports</h3>
 
 <ul>
 
-<li>
-<strong>Eastern Ghats Mobile Belt (EGMB) Geological Field Report</strong><br>
-Field investigation focusing on lithology, metamorphic zones and petrographic characteristics across EGMB region, Odisha.
-</li>
+<li>Eastern Ghats Mobile Belt (EGMB) Geological Field Report</li>
 
-<li>
-<strong>Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast</strong><br>
-Field-based study analysing beach morphology, sediment characteristics and shoreline processes.
-</li>
+<li>Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast</li>
 
 </ul>
 
-</section>
+</div>
 
-<section>
+<div class="card">
 
-<h3>Geo-AI Research Projects</h3>
+<h3>Skills</h3>
+
+<ul>
+
+<li>Computational Geoscience & Geo-AI</li>
+<li>Python scientific computing</li>
+<li>Machine learning analysis</li>
+<li>GIS & geological mapping</li>
+<li>Petrographic microscopy</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Contact</h3>
+
+<p>Phone: +91 7855880937</p>
+
+<p>Email: bikrantmishra.geo.2005@gmail.com</p>
+
+<p>
+<a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398">LinkedIn</a>
+</p>
+
+<p>
+<a href="https://github.com/bikrantmishrageo2005">GitHub</a>
+</p>
+
+</div>
+
+</div>
+
+<h3 style="color:#22c55e">Geo-AI Research Projects</h3>
 
 <div class="projects">
 
@@ -227,9 +244,7 @@ Geo-AI smart city system integrating pollution monitoring, seismic risk analytic
 
 <h4>Earthquake Strength Classification</h4>
 
-<p>
-Machine learning model for classifying earthquake intensity.
-</p>
+<p>Machine learning model for classifying earthquake intensity.</p>
 
 <a href="https://github.com/bikrantmishrageo2005/GeoAI-Earthquake-Strength-Classification">
 View Code
@@ -241,9 +256,7 @@ View Code
 
 <h4>Mineral Prospectivity Mapping</h4>
 
-<p>
-Geo-AI model predicting mineralized zones using geospatial data.
-</p>
+<p>Geo-AI model predicting mineralized zones using geospatial data.</p>
 
 <a href="https://github.com/bikrantmishrageo2005/mineral-prospectivity-mapping">
 View Code
@@ -255,9 +268,7 @@ View Code
 
 <h4>Hydrocarbon Prospectivity Model</h4>
 
-<p>
-AI-driven basin modelling for hydrocarbon exploration.
-</p>
+<p>AI-driven basin modelling for hydrocarbon exploration.</p>
 
 <a href="https://github.com/bikrantmishrageo2005/GeoAI-Hydrocarbon-Prospectivity-Modeling">
 View Code
@@ -267,85 +278,20 @@ View Code
 
 </div>
 
-</section>
-
-<section>
-
-<h3>Research Paper</h3>
-
-<p>
-
-Mishra, B.K. (2026)  
-OMEGA-CITY: A Geo-AI Powered Sustainable Urban Intelligence Framework.
-
-</p>
-
-</section>
-
-<section>
-
-<h3>Skills</h3>
-
-<ul>
-
-<li>Computational Geoscience & Geo-AI</li>
-<li>Python for scientific computing</li>
-<li>Machine Learning for geological analysis</li>
-<li>GIS & geological mapping</li>
-<li>Petrographic microscopy</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h3>Contact</h3>
-
-<p>Phone: +91 7855880937</p>
-
-<p>Email: bikrantmishra.geo.2005@gmail.com</p>
-
-<p>
-LinkedIn  
-<a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398">
-linkedin.com/in/bikrant-kumar-mishra
-</a>
-</p>
-
-<p>
-GitHub  
-<a href="https://github.com/bikrantmishrageo2005">
-github.com/bikrantmishrageo2005
-</a>
-</p>
-
-</section>
-
-<section>
-
-<h3>Curriculum Vitae</h3>
-
-<a href="Bikrant_BS.c_cv.pdf" download class="button">
-Download CV
-</a>
-
-</section>
-
 </div>
 
 <script>
 
 const globe = Globe()
 (document.getElementById('earth-bg'))
-.globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
 .backgroundColor('rgba(0,0,0,0)')
 .showAtmosphere(true)
 .atmosphereColor('#3b82f6')
 .atmosphereAltitude(0.25)
 
 globe.controls().autoRotate = true
-globe.controls().autoRotateSpeed = 0.4
+globe.controls().autoRotateSpeed = 0.35
 
 </script>
 
