@@ -27,7 +27,7 @@ left:0;
 width:100%;
 height:100%;
 z-index:-1;
-opacity:0.6;
+opacity:0.55;
 }
 
 /* MAIN CONTAINER */
@@ -35,7 +35,7 @@ opacity:0.6;
 .container{
 max-width:1100px;
 margin:auto;
-background:rgba(2,6,23,0.85);
+background:rgba(2,6,23,0.88);
 padding:40px;
 border-radius:15px;
 box-shadow:0 0 60px rgba(59,130,246,0.6);
@@ -193,11 +193,15 @@ CGPA: 8.14 / 10
 
 <ul>
 
-<li>Geological Field Report – Eastern Ghats Mobile Belt (EGMB), Odisha</li>
+<li>
+<strong>Eastern Ghats Mobile Belt (EGMB) Geological Field Report</strong><br>
+Field investigation focusing on lithology, metamorphic zones and petrographic characteristics across EGMB region, Odisha.
+</li>
 
-<li>Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast</li>
-
-<li>Local Geological Assessment – Koraput Region</li>
+<li>
+<strong>Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast</strong><br>
+Field-based study analysing beach morphology, sediment characteristics and shoreline processes.
+</li>
 
 </ul>
 
@@ -271,7 +275,7 @@ View Code
 
 <p>
 
-Mishra, B.K. (2026).  
+Mishra, B.K. (2026)  
 OMEGA-CITY: A Geo-AI Powered Sustainable Urban Intelligence Framework.
 
 </p>
@@ -303,21 +307,17 @@ OMEGA-CITY: A Geo-AI Powered Sustainable Urban Intelligence Framework.
 <p>Email: bikrantmishra.geo.2005@gmail.com</p>
 
 <p>
-
 LinkedIn  
 <a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398">
 linkedin.com/in/bikrant-kumar-mishra
 </a>
-
 </p>
 
 <p>
-
 GitHub  
 <a href="https://github.com/bikrantmishrageo2005">
 github.com/bikrantmishrageo2005
 </a>
-
 </p>
 
 </section>
@@ -326,7 +326,9 @@ github.com/bikrantmishrageo2005
 
 <h3>Curriculum Vitae</h3>
 
-<a href="Bikrant_BSc_cv.pdf" download class="button">Download CV</a>
+<a href="Bikrant_BS.c_cv.pdf" download class="button">
+Download CV
+</a>
 
 </section>
 
@@ -335,21 +337,17 @@ github.com/bikrantmishrageo2005
 <script>
 
 const globe = Globe()
-
 (document.getElementById('earth-bg'))
-
 .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-
 .backgroundColor('rgba(0,0,0,0)')
-
 .showAtmosphere(true)
-
 .atmosphereColor('#3b82f6')
-
 .atmosphereAltitude(0.25)
+
+globe.controls().autoRotate = true
+globe.controls().autoRotateSpeed = 0.4
 
 </script>
 
 </body>
-
 </html>
