@@ -15,13 +15,19 @@ margin:0;
 padding:40px;
 background:#020617;
 color:#e2e8f0;
+overflow-x:hidden;
+}
 
-background-image:
-radial-gradient(white 1px, transparent 1px),
-radial-gradient(white 1px, transparent 1px);
+/* EARTH BACKGROUND */
 
-background-size:50px 50px;
-background-position:0 0,25px 25px;
+#earth-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:0.6;
 }
 
 /* MAIN CONTAINER */
@@ -29,7 +35,7 @@ background-position:0 0,25px 25px;
 .container{
 max-width:1100px;
 margin:auto;
-background:#020617;
+background:rgba(2,6,23,0.85);
 padding:40px;
 border-radius:15px;
 box-shadow:0 0 60px rgba(59,130,246,0.6);
@@ -44,6 +50,8 @@ margin-bottom:40px;
 
 .profile img{
 width:180px;
+height:180px;
+object-fit:cover;
 border-radius:50%;
 border:3px solid #3b82f6;
 box-shadow:0 0 30px #3b82f6;
@@ -119,18 +127,13 @@ transform:scale(1.05);
 box-shadow:0 0 40px rgba(59,130,246,0.8);
 }
 
-/* EARTH */
-
-#earth{
-height:500px;
-margin-bottom:40px;
-}
-
 </style>
 
 </head>
 
 <body>
+
+<div id="earth-bg"></div>
 
 <div class="container">
 
@@ -142,18 +145,14 @@ margin-bottom:40px;
 
 <h2>B.Sc Geology | Geo-AI Researcher</h2>
 
-<a href="Bikrant_BS.c_cv.pdf" class="button">Download CV</a>
-
 </div>
-
-<div id="earth"></div>
 
 <section>
 
 <h3>Profile</h3>
 
 <p>
-I am a B.Sc. Geology undergraduate with strong interest in Geo-AI, GIS and computational geoscience. My work integrates geological field investigation with machine learning and geospatial analysis for hazard assessment and resource exploration. My long-term goal is to develop AI-assisted geoscience systems for sustainable resource management and disaster risk reduction.
+I am a B.Sc. Geology undergraduate with strong interest in Geo-AI, GIS and computational geoscience. My work integrates geological field investigation with machine learning and geospatial analysis for hazard assessment and resource exploration.
 </p>
 
 </section>
@@ -165,13 +164,9 @@ I am a B.Sc. Geology undergraduate with strong interest in Geo-AI, GIS and compu
 <ul>
 
 <li>AI-driven geological interpretation</li>
-
 <li>Earthquake prediction using machine learning</li>
-
 <li>Computational mineral exploration</li>
-
 <li>Hydrocarbon prospectivity modelling</li>
-
 <li>Geospatial analysis and remote sensing</li>
 
 </ul>
@@ -198,17 +193,11 @@ CGPA: 8.14 / 10
 
 <ul>
 
-<li>
-Geological Field Report – Eastern Ghats Mobile Belt (EGMB), Odisha
-</li>
+<li>Geological Field Report – Eastern Ghats Mobile Belt (EGMB), Odisha</li>
 
-<li>
-Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast
-</li>
+<li>Coastal Geomorphology & Sediment Dynamics – Gopalpur Coast</li>
 
-<li>
-Local Geological Assessment – Koraput Region
-</li>
+<li>Local Geological Assessment – Koraput Region</li>
 
 </ul>
 
@@ -283,14 +272,7 @@ View Code
 <p>
 
 Mishra, B.K. (2026).  
-OMEGA-CITY: A Geo-AI Powered Sustainable Urban Intelligence Framework for Real-Time Environmental Optimization, Earth-Hazard Prediction and Climate Resilience.
-
-</p>
-
-<p>
-
-Accepted Abstract –  
-1st International Conference on Sustainability-Oriented Learning for a Viable Earth (SOLVE 2026), VITAM, Odisha.
+OMEGA-CITY: A Geo-AI Powered Sustainable Urban Intelligence Framework.
 
 </p>
 
@@ -303,18 +285,10 @@ Accepted Abstract –
 <ul>
 
 <li>Computational Geoscience & Geo-AI</li>
-
 <li>Python for scientific computing</li>
-
 <li>Machine Learning for geological analysis</li>
-
 <li>GIS & geological mapping</li>
-
 <li>Petrographic microscopy</li>
-
-<li>3D geological visualization</li>
-
-<li>Geological field mapping</li>
 
 </ul>
 
@@ -348,23 +322,31 @@ github.com/bikrantmishrageo2005
 
 </section>
 
+<section>
+
+<h3>Curriculum Vitae</h3>
+
+<a href="Bikrant_BSc_cv.pdf" download class="button">Download CV</a>
+
+</section>
+
 </div>
 
 <script>
 
-const world = Globe()
+const globe = Globe()
 
-(document.getElementById('earth'))
+(document.getElementById('earth-bg'))
 
 .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
 
-.backgroundColor('#020617')
+.backgroundColor('rgba(0,0,0,0)')
 
 .showAtmosphere(true)
 
 .atmosphereColor('#3b82f6')
 
-.atmosphereAltitude(0.25);
+.atmosphereAltitude(0.25)
 
 </script>
 
