@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,28 +14,11 @@
 
 body{
 margin:0;
-font-family:Segoe UI, sans-serif;
-background:#020617;
+font-family:Segoe UI;
+background:#010617;
 color:#e2e8f0;
 overflow-x:hidden;
 }
-
-/* STAR FIELD */
-
-body:before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:radial-gradient(white 1px, transparent 1px);
-background-size:60px 60px;
-opacity:0.15;
-z-index:-2;
-}
-
-/* EARTH */
 
 #earth-bg{
 position:fixed;
@@ -43,10 +27,8 @@ left:0;
 width:100%;
 height:100%;
 z-index:-1;
-opacity:0.65;
+opacity:0.9;
 }
-
-/* GLASS CONTAINER */
 
 .container{
 
@@ -55,19 +37,17 @@ margin:60px auto;
 
 padding:40px;
 
-background:rgba(15,23,42,0.55);
+background:rgba(2,6,23,0.45);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(28px);
 
 border-radius:20px;
 
 border:1px solid rgba(255,255,255,0.08);
 
-box-shadow:0 0 80px rgba(0,0,0,0.7);
+box-shadow:0 0 120px rgba(0,0,0,0.9);
 
 }
-
-/* PROFILE */
 
 .profile{
 text-align:center;
@@ -86,29 +66,19 @@ object-fit:cover;
 h1{
 color:#38bdf8;
 font-size:2.6rem;
-margin-bottom:5px;
 }
 
 h2{
 color:#cbd5f5;
 font-weight:300;
-margin-top:0;
 }
-
-/* LINKS */
 
 .links a{
 margin:0 12px;
 color:#38bdf8;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 }
-
-.links a:hover{
-color:white;
-}
-
-/* GRID */
 
 .grid{
 display:grid;
@@ -117,11 +87,9 @@ gap:25px;
 margin-top:25px;
 }
 
-/* CARDS */
-
 .card{
 
-background:rgba(2,6,23,0.65);
+background:rgba(2,6,23,0.6);
 
 padding:25px;
 
@@ -139,7 +107,7 @@ transform:translateY(-10px);
 
 border-color:#38bdf8;
 
-box-shadow:0 0 25px rgba(56,189,248,0.5);
+box-shadow:0 0 30px rgba(56,189,248,0.6);
 
 }
 
@@ -148,8 +116,6 @@ color:#22c55e;
 border-bottom:1px solid rgba(34,197,94,0.3);
 padding-bottom:8px;
 }
-
-/* BUTTONS */
 
 .button{
 
@@ -167,10 +133,6 @@ color:#38bdf8;
 
 text-decoration:none;
 
-font-size:0.9rem;
-
-transition:0.3s;
-
 }
 
 .button:hover{
@@ -181,18 +143,9 @@ color:#020617;
 
 }
 
-/* FOOTER */
-
-footer{
-
+.qr{
 text-align:center;
-
-margin-top:60px;
-
-opacity:0.8;
-
-font-size:0.9rem;
-
+margin-top:40px;
 }
 
 </style>
@@ -215,9 +168,9 @@ font-size:0.9rem;
 
 <div class="links">
 
-<a href="https://github.com/bikrantmishrageo2005" target="_blank">GitHub</a>
+<a href="https://github.com/bikrantmishrageo2005">GitHub</a>
 
-<a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398" target="_blank">LinkedIn</a>
+<a href="https://linkedin.com/in/bikrant-kumar-mishra-92184a398">LinkedIn</a>
 
 <a href="mailto:bikrantmishra.geo.2005@gmail.com">Email</a>
 
@@ -236,7 +189,7 @@ font-size:0.9rem;
 
 <p>
 
-My research focuses on integrating Artificial Intelligence with geological data to develop predictive models for earthquake hazard analysis, mineral prospectivity mapping, and hydrocarbon exploration. I aim to advance computational geoscience methods for sustainable resource exploration and disaster risk reduction.
+My research integrates Artificial Intelligence with geological data to develop predictive models for earthquake hazard analysis, mineral exploration, and hydrocarbon prospectivity.
 
 </p>
 
@@ -283,6 +236,21 @@ My research focuses on integrating Artificial Intelligence with geological data 
 </div>
 
 
+<h3>Academic Projects</h3>
+
+<div class="card">
+
+<h4>Placental Mammals Evolution</h4>
+
+<p>
+
+Academic research project studying evolutionary diversification of placental mammals through fossil evidence and geological time scale.
+
+</p>
+
+</div>
+
+
 <h3>Geo-AI Research Projects</h3>
 
 <div class="grid">
@@ -291,20 +259,15 @@ My research focuses on integrating Artificial Intelligence with geological data 
 
 <h4>Earthquake Strength Classification</h4>
 
-<p>Machine learning model for earthquake magnitude classification.</p>
-
 <a class="button" href="https://bikrantmishrageo2005.github.io/GeoAI-Earthquake-Strength-Classification/">Live Project</a>
 
 <a class="button" href="https://github.com/bikrantmishrageo2005/GeoAI-Earthquake-Strength-Classification">GitHub Code</a>
 
 </div>
 
-
 <div class="card">
 
 <h4>Mineral Prospectivity Mapping</h4>
-
-<p>Spatial AI model for predicting mineralized zones.</p>
 
 <a class="button" href="https://bikrantmishrageo2005.github.io/mineral-prospectivity-mapping/">Live Project</a>
 
@@ -312,14 +275,23 @@ My research focuses on integrating Artificial Intelligence with geological data 
 
 </div>
 
-
 <div class="card">
 
 <h4>Hydrocarbon Prospectivity Modeling</h4>
 
-<p>Machine learning basin modeling for hydrocarbon exploration.</p>
-
 <a class="button" href="https://bikrantmishrageo2005.github.io/GeoAI-Hydrocarbon-Prospectivity-Modeling/">Live Project</a>
+
+<a class="button" href="https://github.com/bikrantmishrageo2005/GeoAI-Hydrocarbon-Prospectivity-Modeling">GitHub Code</a>
+
+</div>
+
+<div class="card">
+
+<h4>Eastern Ghats Mobile Belt Field Study</h4>
+
+<a class="button" href="https://bikrantmishrageo2005.github.io/eastern-ghats-mobile-belt-field-study/">Live Project</a>
+
+<a class="button" href="https://github.com/bikrantmishrageo2005/eastern-ghats-mobile-belt-field-study">GitHub Code</a>
 
 </div>
 
@@ -328,11 +300,46 @@ My research focuses on integrating Artificial Intelligence with geological data 
 
 <h3>Research & Field Reports</h3>
 
+<div class="grid">
+
 <div class="card">
 
-<p>Eastern Ghats Mobile Belt Geological Field Study.</p>
+<h4>Eastern Ghats Mobile Belt Geological Study</h4>
 
-<a class="button" href="https://drive.google.com/file/d/1RARTVAqPCuQO_Yaq7eBROUf2qzYmINB_/view" target="_blank">Open Field Report (PDF)</a>
+<a class="button" href="https://drive.google.com/file/d/1RARTVAqPCuQO_Yaq7eBROUf2qzYmINB_/view">Open Report</a>
+
+</div>
+
+<div class="card">
+
+<h4>Coastal Region Geological Study</h4>
+
+<p>Field study of coastal geomorphology and sediment dynamics (report in preparation).</p>
+
+</div>
+
+</div>
+
+
+<h3>Geological Skills</h3>
+
+<div class="card">
+
+<ul>
+
+<li>Geological Field Mapping & Structural Interpretation</li>
+
+<li>Lithology Identification & Stratigraphic Logging</li>
+
+<li>Petrographic Analysis (Thin Section PPL/XPL)</li>
+
+<li>Structural Geology (Folds, Faults, Joints)</li>
+
+<li>Mineral Identification & Rock Classification</li>
+
+<li>Geological Field Documentation & Report Writing</li>
+
+</ul>
 
 </div>
 
@@ -345,24 +352,29 @@ My research focuses on integrating Artificial Intelligence with geological data 
 
 <li>Python (NumPy, Pandas, Matplotlib)</li>
 
-<li>Machine Learning (Random Forest, Classification)</li>
+<li>Machine Learning (Random Forest)</li>
 
 <li>GIS & Spatial Analysis (QGIS)</li>
 
-<li>Geological Field Mapping</li>
-
-<li>Petrographic Analysis (PPL / XPL)</li>
-
-<li>Scientific Visualization</li>
+<li>Data Visualization</li>
 
 </ul>
 
 </div>
 
 
-<footer>
+<div class="qr">
 
-<p>© 2026 Bikrant Kumar Mishra — Geo-AI Research Portfolio</p>
+<h3>Portfolio QR Code</h3>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://bikrantmishrageo2005.github.io">
+
+</div>
+
+
+<footer style="text-align:center;margin-top:40px;">
+
+© 2026 Bikrant Kumar Mishra — Geo-AI Portfolio
 
 </footer>
 
@@ -370,20 +382,6 @@ My research focuses on integrating Artificial Intelligence with geological data 
 
 
 <script>
-
-const N=60;
-
-const gData=[...Array(N).keys()].map(()=>({
-
-lat:(Math.random()-0.5)*180,
-
-lng:(Math.random()-0.5)*360,
-
-size:Math.random()/2,
-
-color:["#22c55e","#38bdf8","#ffffff"][Math.floor(Math.random()*3)]
-
-}));
 
 const globe=Globe()
 
@@ -399,13 +397,7 @@ const globe=Globe()
 
 .atmosphereColor('#38bdf8')
 
-.atmosphereAltitude(0.25)
-
-.pointsData(gData)
-
-.pointAltitude('size')
-
-.pointColor('color');
+.atmosphereAltitude(0.25);
 
 globe.width(window.innerWidth);
 
@@ -413,11 +405,10 @@ globe.height(window.innerHeight);
 
 globe.controls().autoRotate=true;
 
-globe.controls().autoRotateSpeed=0.35;
-
-globe.controls().enableZoom=false;
+globe.controls().autoRotateSpeed=0.6;
 
 </script>
 
 </body>
+
 </html>
